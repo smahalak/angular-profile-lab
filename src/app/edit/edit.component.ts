@@ -12,8 +12,11 @@ import { ProfileService } from '../profile.service';
 export class EditComponent implements OnInit {
 
   user!: UserProfile;
+  //a property that can hold the information in the UserProfile class from the service. The user! does not need to match the object
 
   constructor(private editService: ProfileService, private router: Router) { }
+  //make the dependancy injection first
+
 
   ngOnInit(): void {
     this.user = this.editService.getUserProfile()

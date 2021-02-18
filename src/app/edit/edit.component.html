@@ -1,13 +1,14 @@
 <div >
 <h1>Use the form below to update your profile.</h1>
-
+<!-- template reference -->
 <form class="form" #editForm="ngForm" (ngSubmit)="formSubmission(editForm)">
    
     <label for="name">Name</label>
     <input type="text" name="name" id="name" [ngModel]="user.name">
+    <!--[ngModel]="user.name" one way data binding that makes it so the user object loads on the edit page with the user!: UserProfile plus ngOnInit  -->
    
     <label for="contact">Contact</label>
-    <input type="text" name="tcontact" id="tcontact" [ngModel]="user.contact">
+    <input type="text" name="contact" id="contact" [ngModel]="user.contact">
     
     <label for="bio">Bio</label>
     <textarea name="bio" id="bio" cols="30" rows="10" [ngModel]="user.bio"></textarea>
